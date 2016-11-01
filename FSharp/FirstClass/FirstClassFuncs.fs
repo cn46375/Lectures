@@ -103,7 +103,7 @@ let getAdder baseVal =
         baseVal + x
     adder
 
-// Examine the type of getAdder: int -> (int -> int)
+// Examine the type of getAdder: int -> (int -> int) - Chris: Function that takes an integer and returns a function
 // getAdder returns a function that takes an int and returns an int...
 // but how is the return value of that function calculated? It uses baseVal's value
 // when getAdder is actually invoked. That is a DYNAMIC value that is not known until
@@ -113,15 +113,23 @@ let getAdder baseVal =
 // To use it:
 let addBy5 = getAdder 5
 addBy5 10 |> printfn "5 + 10 = %d"
+// baseVal = 5
+//  let adder x = 
+//      5 + x
+//  adder
+            
 
 // Calling getAdder multiple times will result in multiple copies of "adder" being
 // created, each with a different value of "baseVal".
 let addBy100 = getAdder 100
 addBy100 10 |> printfn "100 + 10 = %d"
-
+// baseVal = 100
+//  let adder x = 
+//      100 + x
+//  adder
 
 // This may be troubling... how does it POSSIBLY work?
-
+// Concept of closure
 
 
 
