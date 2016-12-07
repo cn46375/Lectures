@@ -18,3 +18,5 @@ aunt(X, Y) :- female(X), parent(Z, Y), sibling(X, Z).
 ancestor(X, Y) :- parent(X, Y).
 ancestor(X, Y) :- parent(Z, Y), ancestor(X, Z).
 
+cousin(X, Y) :- parent(Z1, X), parent(Z2, Y), sibling(Z1, Z2), X \= Y.
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReplState" timestamp="1478065220817">{:repl-history {:ide [], :local [&quot;(use 'functional-programming.core)&quot; &quot;(println (filter #(= 0 (rem % 3)) mylist))&quot; &quot;(println (map #(/ (even? %) 2) mylist))&quot; &quot;(println (map #(/ (map even? %) 2) mylist))&quot; &quot;(println (map #(* % %) mylist))&quot; &quot;(let [even-list (map even? mylist)]\n  (println (map (/ even-list 2) mylist)))&quot; &quot;(println (map #(/ % 2) mylist))&quot; &quot;(println (map #(double (/ % 2)) mylist))&quot; &quot;(println (map #(if (even? %) (double (/ % 2))\n                             :else %) mylist))&quot; &quot;(println (map #(if (even? %) (double (/ % 2)) %) mylist))&quot;], :remote []}}</component>
+</project>

@@ -33,3 +33,18 @@ evens([], []).
 evens([H|T], [H|E]) :- H rem 2 =:= 0, evens(T, E).
 evens([_|T], E) :- evens(T, E).
 
+third([_,_,C|_],C).
+
+last([I],I).
+last([_|T], I) :- last(T, I).
+
+mean([], 0).
+mean([I], I).
+mean([H|T], I) :- sum([H|T], X), mylength([H|T], Y), I is X / Y.
+
+prefix([],[]).
+prefix([],[_]).
+prefix([],[_|_]).
+prefix([H], [H|_]).
+prefix([H|T], [H|T]).
+prefix([H|T], [H|Z]) :- prefix(T, Z).
